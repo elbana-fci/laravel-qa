@@ -7,6 +7,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+$fa-font-path: "../webfonts";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
 .counters{
     margin-right: 30px;
     font-size: 10px;
@@ -43,4 +49,50 @@
 
 form.form-delete{
     display: inline;
+}
+
+.vote-controls{
+    min-width: 60px;
+    margin-right: 20px;
+    text-align: center;
+    color: #666;
+
+    span, a{
+        display: block;
+    }
+    i{
+        font-size: 1.45rem;
+        color: #333!important;
+    }
+
+    span{
+        &.votes-count{
+            font-size: 18px;
+        }
+        &.favorites-count{
+            font-size: 12px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        a{
+            cursor: pointer;
+            color: #333;
+
+            &.off, &.off:hover{
+                color: #666;
+            }
+        }
+
+        &.favorite{
+            &.favorited, &.favorited:hover{
+            color: $warning;
+            }
+        }
+        
+    }
+
+    &.vote-accepted{
+        color: green;
+    }
 }
