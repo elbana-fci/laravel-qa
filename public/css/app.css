@@ -17063,7 +17063,7 @@ form.form-delete {
 
 .vote-controls i {
   font-size: 1.45rem;
-  color: #333 !important;
+  color: #333;
 }
 
 .vote-controls span.votes-count {
@@ -17092,6 +17092,6 @@ form.form-delete {
 }
 
 .vote-controls.vote-accepted {
-  color: green;
+  color: green !important;
 }
 
