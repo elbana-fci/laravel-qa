@@ -24,6 +24,7 @@ Route::delete('/questions/{question}/answers/{answer}/destroy', 'AnswersControll
 Route::patch('/questions/{question}/answers/{answer}/update', 'AnswersController@update')->name('answers.update');
 
 Route::get('/questions/{slug}', 'QuestionsController@show')->name('questions.show');
+Route::post('/answers/{answer}/accept', 'AcceptAnswerController')->name('answers.accept');
 
 Auth::routes();
 

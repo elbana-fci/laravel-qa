@@ -63,6 +63,10 @@ form.form-delete{
     i{
         font-size: 1.45rem;
         color: #333;
+
+        &.vote-accepted{
+            color: green!important;
+        }
     }
 
     span{
@@ -92,7 +96,4 @@ form.form-delete{
         
     }
 
-    &.vote-accepted{
-        color: green!important;
-    }
 }

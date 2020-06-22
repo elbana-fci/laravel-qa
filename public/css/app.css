@@ -17066,6 +17066,10 @@ form.form-delete {
   color: #333;
 }
 
+.vote-controls i.vote-accepted {
+  color: green !important;
+}
+
 .vote-controls span.votes-count {
   font-size: 18px;
 }
@@ -17089,9 +17093,5 @@ form.form-delete {
 .vote-controls span.favorite.favorited,
 .vote-controls span.favorite.favorited:hover {
   color: #ffed4a;
-}
-
-.vote-controls.vote-accepted {
-  color: green !important;
 }
 
