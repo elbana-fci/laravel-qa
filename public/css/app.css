@@ -17063,7 +17063,6 @@ form.form-delete {
 
 .vote-controls i {
   font-size: 1.45rem;
-  color: #333;
 }
 
 .vote-controls i.vote-accepted {
@@ -17090,8 +17089,13 @@ form.form-delete {
   color: #666;
 }
 
-.vote-controls span.favorite.favorited,
-.vote-controls span.favorite.favorited:hover {
-  color: #ffed4a;
+.vote-controls a.vote-up,
+.vote-controls a.vote-down {
+  color: #333;
+}
+
+.vote-controls a.favorite.favorited,
+.vote-controls a.favorite.favorited:hover {
+  color: orange !important;
 }
 
