@@ -10,7 +10,7 @@ class Answer extends Model
     
     protected $fillable = ['body', 'user_id'];
 
-    protected $appends = ['created_date'];
+    protected $appends = ['created_date', 'body_html'];
 
     public function question(){
         return $this->belongsTo(Question::class);
@@ -40,6 +40,10 @@ class Answer extends Model
 
         public function getCreatedDateAttribute(){
             return $this->created_at->diffForHumans();
+        }
+
+        public function getBodyHtmlAttribute(){
+            return $this->body;
         }
 
         public function getIsBestAttribute(){
