@@ -1941,6 +1941,17 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err.response.data.errors.body[0]);
       });
+    },
+    destroy: function destroy() {
+      var _this2 = this;
+
+      if (confirm('Are you sure?')) {
+        axios["delete"]("/questions/".concat(this.questionId, "/answers/").concat(this.id, "/destroy")).then(function (res) {
+          $(_this2.$el).fadeOut(500, function () {
+            alert(res.data.message);
+          });
+        });
+      }
     }
   },
   computed: {

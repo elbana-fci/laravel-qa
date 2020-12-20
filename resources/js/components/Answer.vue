@@ -37,13 +37,24 @@ export default {
                 console.log(err.response.data.errors.body[0]);
             });
             
+        },
+
+        destroy () {
+            if(confirm('Are you sure?')) {
+                axios.delete(`/questions/${this.questionId}/answers/${this.id}/destroy`)
+                .then(res =>{
+                    $(this.$el).fadeOut(500, () => {
+                        alert(res.data.message);
+                    })
+                });
+            }
         }
     },
 
     computed: {
         isInvalid () {
             return this.body.length < 10;
-        }
+        },
     }
 }
 </script>
